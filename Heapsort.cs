@@ -1,9 +1,9 @@
 #region Heapsort
 namespace HeapSort
 {
-    public class HeapSort
+    public static class HeapSort
     {
-        public void Sort(int[] inputArray)
+        public static void Sort(int[] inputArray)
         {
             int sizeOfHeap = inputArray.Length;
             int lastNonleaf = sizeOfHeap / 2 - 1; //you can find the last non leaf with total/2-1.
@@ -17,7 +17,7 @@ namespace HeapSort
                 Heapify(inputArray, i, 0);
             }
         }
-        void Heapify(int[] inputArray, int sizeOfHeap, int nodeIndex)
+        static void Heapify(int[] inputArray, int sizeOfHeap, int nodeIndex)
         {
             int largestValue = nodeIndex; //sets largest value to index to start
             int leftIndex = (2 * nodeIndex + 1); //left child index is equal to 2n+1
@@ -34,3 +34,4 @@ namespace HeapSort
     }
 }
 #endregion Heapsort
+
